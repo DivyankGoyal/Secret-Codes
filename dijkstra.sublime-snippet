@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+vector<pair<ll, ll>> dijkstra(vector<vector<pair<ll, ll>>> &adj, ll n, ll u)
+{
+    vector<pair<ll, ll>> dij(n + 1, {inf, -1});
+    dij[u].first = 0;
+    dij[u].second = -1;
+    multiset<pair<ll, ll>> q;
+    q.insert({dij[u].first, u});
+    while (!q.empty())
+    {
+        ll v = q.begin()->second;
+        q.erase(q.begin());
+
+        for (auto edge : adj[v])
+        {
+            ll to = edge.first;
+            ll len = edge.second;
+
+            if (dij[v].first + len < dij[to].first)
+            {
+                q.erase({dij[to].first, to});
+                dij[to].first = dij[v].first + len;
+                dij[to].second = v;
+                q.insert({dij[to].first, to});
+            }
+        }
+    }
+    return dij;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tdijkstra</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

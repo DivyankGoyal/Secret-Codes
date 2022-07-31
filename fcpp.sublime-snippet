@@ -1,0 +1,72 @@
+<snippet>
+	<content><![CDATA[
+// Remember me at bad times
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int                  long long
+#define ll                   long long
+#define ld                   long double
+#define pb                   push_back
+#define sz(a)                ((ll)a.size())
+#define min(a,b)             ((ll)min((ll)(a),(ll)(b)))
+#define max(a,b)             ((ll)max((ll)(a),(ll)(b)))
+#define ff                   first
+#define ss                   second
+#define sp(x)                setprecision(x)
+#define countsetbit(n)       __builtin_popcount(n)
+#define inf                  1000000000000000
+#define M                    ((1000*1000*1000) + 7)
+// #define M                    998244353
+
+ll ceil(ll a, ll b) {return ((a + b - 1) / b);}
+ll power(ll a, ll b) {return b == 0 ? 1 : (b % 2 ? a : 1) * power(a * a, b / 2);}
+
+// divbugger
+#ifdef _div
+// #define printline
+#include<divyank.h>
+#else
+#define ttt
+#define trace(...)
+#define watch(...)
+#define printclock(...)
+#endif
+
+
+void Divyank(ll tc)
+{
+    ll n = 0, m = 0, i, j, k = 0, l = 0, mini = INT_MAX, maxi = 0, ans = 0, sum = 0;
+    ll x = 0, y = 0, z = 0, r = 0, p = -1, q = 0, f = 0, g = 0, sum2 = 0;
+    char ch;
+    cin >> n;
+    vector<ll> a(n + 1, 0);
+    for (i = 1; i <= n; i++)
+    {
+        cin >> x;
+        a[i] = x;
+    }
+
+}
+
+signed main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll number = 1, i;
+    cin >> number;
+    for (i = 1; i <= number; i++)
+    {
+        // cout<<"Case #"<<i<<": ";
+        Divyank(i);
+    }
+    printclock();
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fcpp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
